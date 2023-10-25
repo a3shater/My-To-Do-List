@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-grid column-gap-2 my-5" style="grid-template-columns: 1fr auto;">
+            <div>
+                <input id="itm" class="w-100 rounded p-3 border-0 shadow-sm" type="text"
+                    placeholder="INSERT YOUR LIST ITEMS HERE" style="outline-color:red;">
+            </div>
+            <div>
+                <button id="add" class="btn btn-danger p-3">CREATE LIST</button>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="my-5">
+                <div class="text-center">
+                    <h2>TODAY'S TASKS</h2>
+                </div>
+                <div id="list" class="border-top border-white pt-3 mt-4 d-grid gap-3"
+                    style="grid-template-columns: repeat(2 ,calc(50% - 0.5rem));">
+                </div>
+            </div>
+            <div class="text-center py-4 bg-secondary-subtle" style="background-color:rgba(0, 0, 0, 0.3);">
+                <p class="fst-italic">**SINGLE CLICK TO MARK COMPLETE &ensp; **DOUBLE CLICK TO REMOVE FORM LIST</p>
+                <button id="rv" class="btn btn-secondary">CLEAR ALL TASKS</button>
+            </div>
+        </div>
+        
+        <div id="empty" class="text-center">
+            <div>
+                <p class="fs-4 fw-bold">NO LIST YET</p>
+            </div>
+            <div>
+                <i class="fa fa-clipboard-check fa-10x" style="color:green"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

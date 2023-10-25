@@ -1,0 +1,26 @@
+body {
+  background-color: wheat;
+}
+
+#list .items {
+  border-top: 10px solid green;
+  background-color: white;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#list .active {
+  text-decoration: line-through;
+  opacity: 0.5;
+  border-color: black;
+}
+
+#list .items:hover {
+  border-color: red;
+  opacity: 1;
+}
+
+#content {
+  display: none;
+}

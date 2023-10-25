@@ -15,14 +15,28 @@ $(function () {
   });
 
   $("#add").click(function () {
-    $("#list").append(`<div class='items'>${$("#itm").val()}</div>`);
-    myToggle();
+    if ($("#itm").val().trim().length == 0) {
+      if (confirm("are you sure you need to add empty task?").valueOf()) {
+        $("#list").append(`<div class='items'>${$("#itm").val()}</div>`);
+        myToggle();
+      }
+    } else {
+      $("#list").append(`<div class='items'>${$("#itm").val()}</div>`);
+      myToggle();
+    }
   });
 
   $("#itm").keypress(function (e) {
     if (e.key == "Enter") {
-      $("#list").append(`<div class='items'>${$("#itm").val()}</div>`);
-      myToggle();
+      if ($("#itm").val().trim().length == 0) {
+        if (confirm("are you sure you need to add empty task?").valueOf()) {
+          $("#list").append(`<div class='items'>${$("#itm").val()}</div>`);
+          myToggle();
+        }
+      } else {
+        $("#list").append(`<div class='items'>${$("#itm").val()}</div>`);
+        myToggle();
+      }
     }
   });
 
